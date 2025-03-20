@@ -1,0 +1,7 @@
+// Ejemplo de mixin: Centramos un elemento
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -1,0 +1,7 @@
+@import "../../assets/styles/_variables.scss";
+
+.register-view {
+  @include center-flex;
+  height: 100vh;
+  background-color: $background-dark;
+}
