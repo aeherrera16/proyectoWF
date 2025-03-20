@@ -22,7 +22,7 @@
   .auth-box {
     display: flex;
     width: 600px;
-    background: rgba(0, 0, 0, 0.6);
+    background: #3a452cb7;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.5s;
@@ -32,7 +32,7 @@
   
   .side-panel {
     width: 35%;
-    background: black;
+    background: rgb(10, 16, 102);
     color: white;
     display: flex;
     flex-direction: column;
@@ -55,10 +55,10 @@
   }
   
   .login-mode .side-panel {
-    background: black;
+    background: #000000ec;
   }
   
   .register-mode .side-panel {
-    background: #333;
+    background: #000000ec;
   }
   
