@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import "./LoginForm.scss";
 import Button from "./Button"; // Importa el componente Button
+import logo from "../../assets/images/espeL.png"; // Importa el logo
 
 const LoginForm = () => {
   const [usuario, setUsuario] = useState("");
@@ -28,6 +29,9 @@ const LoginForm = () => {
 
   return (
     <div className="form">
+      <div className="logo-container">
+        <img src={logo} alt="Logo ESPE" className="login-logo" />
+      </div>
       <h2>INICIAR SESIÓN</h2>
       <input
         type="text"
@@ -45,7 +49,8 @@ const LoginForm = () => {
         {/* Aquí puedes agregar opciones adicionales si lo deseas */}
       </div>
       <Button onClick={handleLogin}>Ingresar</Button> {/* Usamos el componente Button */}
-      <a href="#">¿Olvidaste tu contraseña?</a>
+      <a href="#" className="forgot-password">¿Olvidaste tu contraseña?</a>
+
 
       {error && <p className="error-message">{error}</p>} {/* Muestra el mensaje de error si es necesario */}
     </div>

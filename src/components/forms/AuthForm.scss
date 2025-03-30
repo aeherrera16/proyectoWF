@@ -22,7 +22,7 @@
 .auth-box {
   display: flex;
   width: 600px;
-  background: #3a452cb7;
+  background: #ffffffb7;
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
@@ -60,4 +60,28 @@
 
 .register-mode .side-panel {
   background: #000000ec;
+}
+
+.side-panel {
+  width: 35%;
+  background: rgb(10, 16, 102);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  // Asegura que el contenido se alinee en el centro horizontalmente
+  justify-content: center;  // Centra el contenido verticalmente
+  padding: 20px;
+  text-align: center;  // Alinea el texto en el centro dentro del contenedor
+}
+
+.side-panel h2 {
+  margin-bottom: 20px; // Para darle espacio entre el texto y el botón
+}
+
+.side-panel button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
 }
