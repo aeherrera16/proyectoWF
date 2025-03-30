@@ -1,30 +1,23 @@
 import React, { useState } from "react";
-import Button from "./Button"; // Suponiendo que ya tienes este componente
+import Button from "./Button";
 import "./RegisterForm.scss";
 
 const RegisterForm = () => {
-  // Estados para los campos del formulario
   const [cedula, setCedula] = useState("");
   const [nombres, setNombres] = useState("");
   const [apellidos, setApellidos] = useState("");
   const [id, setId] = useState("");
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
-
-  // Estado de los errores
   const [errors, setErrors] = useState({});
 
-  // Función para validar la cédula (10 dígitos y solo números)
   const validateCedula = (cedula) => {
-    const regex = /^\d{10}$/; // Expresión regular para 10 dígitos numéricos
+    const regex = /^\d{10}$/;
     return regex.test(cedula);
   };
 
-  // Manejo de la entrada de la cédula, solo números y máximo 10 caracteres
   const handleCedulaChange = (e) => {
     const value = e.target.value;
-
-    // Solo permitir números y limitar a 10 dígitos
     if (/^\d{0,10}$/.test(value)) {
       setCedula(value);
     }
@@ -40,7 +33,6 @@ const RegisterForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario si está todo bien
     console.log("Formulario enviado", { cedula, nombres, apellidos, id, correo, contrasena });
   };
 
@@ -53,12 +45,12 @@ const RegisterForm = () => {
             type="text"
             placeholder="Número de cédula"
             value={cedula}
-            onChange={handleCedulaChange} // Cambio aquí para aplicar la validación en tiempo real
+            onChange={handleCedulaChange}
             className={errors.cedula ? "error" : ""}
           />
           <Button type="button" onClick={handleValidateCedula}>Validar</Button>
         </div>
-        {errors.cedula && <p className="error-message">{errors.cedula}</p>} {/* Mensaje de error */}
+        {errors.cedula && <p className="error-message">{errors.cedula}</p>}
         
         <input
           type="text"

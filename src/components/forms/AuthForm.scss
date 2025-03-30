@@ -5,7 +5,7 @@
   height: 100vh;
   background: url("../../assets/images/ESPE-Matriz-Sangolqui.png") no-repeat center;
   background-size: cover;
-  position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+  position: relative;
 }
 
 .auth-container::after {
@@ -15,8 +15,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Ajusta el valor de opacidad entre 0 y 1 */
-  z-index: 0; /* Coloca la capa por debajo del contenido */
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 0; 
 }
 
 .auth-box {
@@ -26,8 +26,8 @@
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
-  position: relative; /* Asegura que el contenido se muestre encima de la capa de fondo */
-  z-index: 1; /* Coloca el contenido sobre la capa de fondo */
+  position: relative; 
+  z-index: 1;
 }
 
 .side-panel {
@@ -68,14 +68,14 @@
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;  // Asegura que el contenido se alinee en el centro horizontalmente
-  justify-content: center;  // Centra el contenido verticalmente
+  align-items: center;  
+  justify-content: center; 
   padding: 20px;
-  text-align: center;  // Alinea el texto en el centro dentro del contenedor
+  text-align: center;  
 }
 
 .side-panel h2 {
-  margin-bottom: 20px; // Para darle espacio entre el texto y el botón
+  margin-bottom: 20px;
 }
 
 .side-panel button {

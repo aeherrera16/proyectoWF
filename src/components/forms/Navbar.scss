@@ -1,73 +1,137 @@
-.navbar {
+.navbar-cyber {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom, // Dirección vertical
+    rgba(42, 8, 69, 0.9) 0%,    // Púrpura oscuro semi-transparente
+    rgba(100, 65, 165, 0.7) 100%  // Púrpura medio más claro
+  );
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(106, 227, 255, 0.2);
+  z-index: 1000;
+  padding: 12px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo-container {
     .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #d50000;
-    }
-  
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-  
-      li a {
-        color: #333;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-  
-        &:hover {
-          color: #d50000;
-        }
+      height: 50px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: rotate(10deg);
       }
     }
   }
-  
-  .logo-image {
-    width: 150px;  // Ajusta el tamaño según necesites
-    height: auto;
-  }
-  
-  .navbar {
-    background: rgba(188, 141, 235, 0.8); // Color oscuro para mejor contraste
-    padding: 15px 20px;
+
+  .menu-items {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  
-    .logo img {
-      height: 50px; // Ajusta según el tamaño de tu imagen
-    }
-  
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-  
-      li {
-        a {
-          text-decoration: none;
-          color: white; // Asegura que la letra sea blanca
-          font-size: 1.2rem;
-          font-weight: bold;
-          transition: color 0.3s ease-in-out;
-  
+    gap: 30px;
+
+    .menu-item {
+      position: relative;
+      cursor: pointer;
+
+      .main-item {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 5px rgba(106, 227, 255, 0.5);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
+          box-shadow: 0 0 15px rgba(106, 227, 255, 0.3);
+        }
+      }
+
+      .submenu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(42, 8, 69, 0.95);
+        border-radius: 8px;
+        padding: 10px 0;
+        min-width: 220px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(106, 227, 255, 0.2);
+        z-index: 100;
+
+        .submenu-item {
+          padding: 10px 20px;
+          color: #e0e0e0;
+          font-weight: 500;
+          transition: all 0.2s ease;
+
           &:hover {
-            color: #f39c12; // Efecto hover con un color llamativo
+            background: rgba(106, 227, 255, 0.1);
+            color: #6ae3ff;
           }
         }
       }
     }
   }
-  
+
+  .logout-button {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #6ae3ff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(106, 227, 255, 0.3);
+
+    &:hover {
+      background: rgba(106, 227, 255, 0.2);
+      box-shadow: 0 0 20px rgba(106, 227, 255, 0.5);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-cyber {
+    padding: 10px 0;
+
+    .navbar-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .menu-items {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      .menu-item {
+        width: 100%;
+        text-align: center;
+
+        .submenu {
+          position: relative;
+          width: 100%;
+          left: 0;
+          transform: none;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

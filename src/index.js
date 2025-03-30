@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';  // Archivo opcional de estilos globales mínimos
+import './index.css'; 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,5 +12,4 @@ root.render(
   </React.StrictMode>
 );
 
-// Si deseas medir el rendimiento, puedes pasar una función a reportWebVitals
 reportWebVitals();
