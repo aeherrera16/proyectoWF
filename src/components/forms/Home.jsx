@@ -100,7 +100,7 @@ const Home = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               <h1 className="main-title">
-                <span className="title-part">EL CYBERACOSO</span>
+                <span className="title-part">EL CIBERACOSO</span>
                 <span className="title-part">Y LAS PALABRAS</span>
                 <span className="title-part">DE ODIO</span>
               </h1>
