@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import PrivacyModal from "./PrivacyModal";
+import logo from "../../assets/images/espeL.png";  // Asegúrate de tener el logo importado
 import "./RegisterForm.scss";
 
 const RegisterForm = () => {
@@ -81,6 +82,11 @@ const RegisterForm = () => {
 
   return (
     <div className="form">
+      {/* Logo agregado */}
+      <div className="logo-container">
+        <img src={logo} alt="Logo ESPE" className="register-logo" />
+      </div>
+
       <h2>REGISTRO</h2>
       <form onSubmit={handleSubmit}>
         <div className="cedula-container">
@@ -96,9 +102,7 @@ const RegisterForm = () => {
         {errors.cedula && <p className="error-message">{errors.cedula}</p>}
 
         <input type="text" placeholder="Nombres" value={nombres} readOnly />
-
         <input type="text" placeholder="Apellidos" value={apellidos} readOnly />
-
         <input type="hidden" value={id} />
 
         <div className="correo-container">
