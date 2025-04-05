@@ -23,13 +23,33 @@ const RegisterForm = () => {
     }
   };
 
-  const handleValidateCedula = () => {
+  const handleValidateCedula = async () => {
     if (!validateCedula(cedula)) {
       setErrors({ ...errors, cedula: "La cédula debe ser un número de 10 dígitos." });
-    } else {
+      return;
+    }
+  
+    try {
+      const response = await fetch(`http://localhost:3001/persona/${cedula}`);
+      const data = await response.json();
+  
+      console.log("Respuesta del servidor:", data);
+  
+      if (!response.ok) throw new Error(data.error || "Persona no encontrada");
+  
+      setNombres(data.nombres);
+      setApellidos(data.apellidos);
+      setId(data.id);
       setErrors({ ...errors, cedula: "" });
+    } catch (error) {
+      setErrors({ ...errors, cedula: "No se encontró una persona con esa cédula." });
+      setNombres("");
+      setApellidos("");
+      setId("");
     }
   };
+  
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
