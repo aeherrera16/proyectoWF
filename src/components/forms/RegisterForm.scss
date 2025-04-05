@@ -8,12 +8,18 @@
     margin-bottom: 20px;
   }
 
+  .bold-black {
+  font-weight: bold;
+  color: black;
+  text-decoration: none; // Opcional, si no quieres subrayado
+}
+
   .cedula-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 10px;
-
+    position: relative;
 
     input {
       flex-grow: 1;
@@ -66,5 +72,136 @@
     color: red;
     font-size: 12px;
     margin: -8px 0 10px 0;
+  }
+
+  /* Estilo para la sección de términos */
+  .terms-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    .terms-label {
+      display: flex;
+      align-items: center;
+      gap: 5px; // Espacio entre el checkbox y el texto
+      font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .correo-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;  // Cambia el cursor a "no permitido"
+  opacity: 0.5;  // Baja la opacidad para indicar que está deshabilitado
+  pointer-events: none;  // Deshabilita cualquier interacción con el botón
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 0, 0);
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .bold-black {
+    font-weight: bold;
+    color: black;
+    text-decoration: none; // Opcional, si no quieres subrayado
+  }
+  
+  .cedula-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+
+    input {
+      flex-grow: 1;
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      max-width: 250px;
+    }
+
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+      width: auto;
+      min-width: 100px;
+      max-width: 150px; 
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin: -8px 0 10px 0;
+  }
+
+  /* Estilo para la sección de términos */
+  .terms-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    .terms-label {
+      display: flex;
+      align-items: center;
+      gap: 5px; // Espacio entre el checkbox y el texto
+      font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .correo-container {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
